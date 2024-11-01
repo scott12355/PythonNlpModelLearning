@@ -1,0 +1,2 @@
+This first chatbot 
+Uses hugging face pipeline to create a simple chatbot with no customized features or training. 
