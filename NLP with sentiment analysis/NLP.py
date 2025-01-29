@@ -14,7 +14,7 @@ print(device)
 # Load the Hugging Face model
 # Load the Hugging Face model
 # Load the Hugging Face tokenizer        EleutherAI/gpt-neo-1.3B
-modelName = "Qwen/Qwen2.5-1.5B-Instruct" #Qwen/Qwen2.5-1.5B-Instruct 
+modelName = "Qwen/Qwen2.5-0.5B-Instruct" #Qwen/Qwen2.5-1.5B-Instruct 
 chatbot_model = pipeline("text-generation", model=modelName, device=device, batch_size=16)
 conversation_history = []
 sentiment_model = pipeline("sentiment-analysis", device=device)
@@ -49,7 +49,7 @@ while quit == False:
     sentiment = sentiment_model(user_input)[0]
     print(sentiment)
     response = generate_response(user_input, sentiment)
-    system('clear')
+    # system('clear')
     print(response)
 
 file_path = "logs/conversation_history.txt"
